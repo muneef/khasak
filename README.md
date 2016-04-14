@@ -8,6 +8,11 @@ Start server
 
 ` brunch watch --server
 
+## Push to github
+
+1. brunch build --production
+2. npm run deploy
+
 
 ## Features
 
