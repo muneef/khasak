@@ -8,7 +8,8 @@
     "url": ""
   },
   "scripts": {
-    "start": "brunch watch --server"
+    "start": "brunch watch --server",
+    "deploy": "git subtree push --prefix public origin gh-pages"
   },
   "dependencies": {
     "autoprefixer": "^5.2.0",
