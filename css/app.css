@@ -798,7 +798,7 @@ img.slider__title {
   background: #000; }
   .fullSliderImage .image {
     height: 100vh;
-    background: url(/img/banner_.jpg) no-repeat center center fixed;
+    background: url(../img/banner_.jpg) no-repeat center center fixed;
     background-size: cover;
     opacity: 0.45; }
   .fullSliderImage .tagline {
