@@ -382,12 +382,6 @@ th {
     margin-left: 0;
     margin-right: 0; }
 
-  .cols-2 {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0; }
-
   .menu-left {
     width: 100%;
     float: right;
@@ -406,7 +400,7 @@ th {
     width: 44.44444%;
     float: left;
     margin-right: 11.11111%; }
-    .cols:nth-last-child(n+1) {
+    .cols:nth-last-child(-n+1) {
       margin-bottom: 0;
       margin-right: 0; }
 
