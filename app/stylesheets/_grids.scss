@@ -1,0 +1,56 @@
+@import "vars";
+$container-style: fluid;
+
+// $susy: (
+//   columns: 12,
+//   gutters: .25,
+//   container: 1120px
+// );
+
+$susy: (
+  /* Tells Susy to use 12 columns */
+  columns: 12,
+  /* Tells Susy that the container has a max-width of 1120px */
+  container: 50em,
+  /* Tells Susy to use border-box */
+  global-box-sizing: border-box 
+);
+
+.contain {
+  @include container($bp-large);
+  // overflow: hidden;
+}
+
+// Small
+// -------
+@include susy-breakpoint($bp-small, $small) {
+  .cols{ @include span(1 of 1); }
+  .cols-2{ @include span(1 of 1); }  
+  .menu-left { @include span(1 of 1 last); }
+  .menu-right { 
+  	display: none;
+  	@include span(1 of 1 last);}
+  .custom-menu-wrapper.open .menu-right { 
+  	display: block; }
+}
+
+// Large
+// -------
+
+@include susy-breakpoint($bp-xl, $large) {
+  .cols { 
+    @include span(1 of 2);
+    &:nth-last-child(n+1) {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+  }
+  .cols-left{ @include span(4 of 6); }  
+  .cols-right{ @include span(2 of 6 last); }  
+  .menu-left { @include span(3 of 12); }
+  .menu-right { 
+  	@include span(9 of 12 last); 
+  	display: block; 
+  }
+}
+

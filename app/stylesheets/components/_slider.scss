@@ -1,0 +1,107 @@
+@import "modular-scale";
+
+$g1: rgba(mix($c-base, #000, 60), 0.25);//rgba(scale-color($c-base, $lightness: 10%), 1);
+$g2: rgba($c-secondary,0.3);
+$g3: rgba(scale-color($c-secondary, $lightness: -50%), 0.3);
+
+
+//
+//
+@include utility('and'){
+  padding-left: 12px;
+  display: inline-block;
+  opacity: 0.6;
+}
+
+// Sponsers Part
+@include object('sponsors') {
+    @extend %clearfix;
+    @include element('item') {
+        float: left;
+        margin-right: 1.5em;
+    }
+    @include element('title') {
+        @include clearfix;
+        font-size: ms(-3);
+        color: rgba(#fff, 0.6);
+        padding-bottom: 1em;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 2px;				
+        padding-top: 1.25em;
+        padding-bottom : 1.25em;
+        clear: both;
+    }   
+
+    @include modifier('large') {
+    	@include clearfix;
+    	clear: both;
+      @include modifies-element('title') {
+         text-transform: capitalize;
+         font-size: ms(1);
+      }
+    }
+}
+
+.white-box{
+	width: 190px;
+	height: 80px;
+	float:left;
+	background-color: #fff;
+	border: solid 1px #ddd;
+}
+
+// Venue Details
+@include object('venue') {
+	padding-bottom: 2em;
+	@include element('date') {
+		font-size: ms(2);
+	  color: $c-invert;
+	  opacity: 0.8;
+	}
+	@include element('venue') {
+		font-size: ms(1);
+		color: $c-invert;
+  	opacity: 0.8;
+	}
+}
+
+img.slider__title {
+  margin-left: -1em;
+}
+
+.fullSliderImage{
+	width: 100%;
+	position: relative;
+	background: #000;
+	
+	.image{
+		height: 100vh;
+		background: url(/img/banner_.jpg) no-repeat center center fixed; 
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		opacity:0.45;
+	}
+
+	.tagline{
+		text-align: center;
+		width: 33%;
+		margin-left: auto;
+		margin-right: auto;
+		@include ms-respond(font-size, 4);
+		@include ms-respond(line-height, 4);
+		color: $c-invert;
+	}
+
+	.tagline-holder{
+		position: absolute;
+		bottom: 10%;
+		// text-align: center;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		z-index: 9000;
+	}
+}

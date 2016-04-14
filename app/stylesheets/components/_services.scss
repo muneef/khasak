@@ -1,0 +1,239 @@
+@import 'bem-constructor';
+@import "modular-scale";
+@import "../vars";
+
+@include utility('left'){
+    float: left;
+}
+
+.o-section__title{
+    font-size: ms(4);
+    color: #A03A3A;
+    padding-bottom: 0.3em;
+}
+
+.title_head{
+    margin-bottom: 1em;
+}
+
+// .o-partons__list{
+//     @include span(1 of 3);
+// }
+
+// .o-partons__list--last{
+//     @include span(1 of 3 last);
+// }
+
+img.o-patron__d {
+    width: 32%;
+    float: left;
+    margin-right: 21px;
+    padding-bottom: 10px;
+}
+
+ul.o-org {
+    list-style: none;
+    padding-left: 0;
+}
+
+#services{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.btn.btn-cto{
+    border-radius: 10rem;
+    background-color: $c-secondary; //$c-base;
+    color: $c-invert;    
+    border:none;    
+    padding-top: 0.75rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 0.65rem;
+    text-decoration: none;    
+}
+
+
+@mixin list_pad($number) {
+  padding-bottom: $number;
+  margin-bottom: $number;
+  padding-top: $number;
+}
+
+@include utility('clearfix'){
+    & {
+        *zoom: 1;
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+@import "susy";
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  container: 71.25rem,
+  global-box-sizing: border-box,
+);
+
+// Colours
+$color-primary: #38a1d6;
+$color-secondary: #16f4d0;
+$color-tertiary: #fcee21;
+$color-grey: #a1acb5;
+$color-grey-light: #dce8ef;
+$color-grey-dark: #333;
+
+// Breakpoints
+$mobile-landscape: 30rem; // 480px
+$tablet: 40rem; // 640px
+$tablet-wide: 48rem; // 768px
+$desktop: 64rem; // 1024px
+$widescreen: 71.25rem; // 1140px
+
+* {
+  box-sizing: border-box;
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+section {
+  @extend %clearfix;
+  margin-bottom: gutter();
+}
+
+// Patrons
+
+@include object('patron') {
+    margin: 0;
+    @extend %clearfix;
+    list-style: none;
+    padding-left:0;
+    
+    @include element('img') {
+        width: 100%;
+    }
+
+    @include element('bio'){
+        font-size: ms(-2);
+    }
+
+    @include element('title'){
+        float: left;    
+        margin-right: 1.5em;
+        font-size: ms(1);
+        text-transform: capitalize;
+        color: rgba(255, 255, 255, 0.8);
+        display: inline-block;
+        float: left;
+        padding-top: 3px;
+        margin-bottom: 0;
+        padding-bottom: 7px;
+    }
+
+    @include element('name') {
+        padding-bottom: 0.3em;
+        padding-top: 0.3em;
+        font-size: ms(1);
+        color: $c-base;
+    }
+
+
+
+    @include element('list'){
+        @include gallery(3);
+        margin-bottom: gutter();
+
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0;
+            margin-right: 0;
+        }
+
+        @include susy-breakpoint($bp-small, $small) {
+            @include gallery(2);
+            &:nth-last-child(-n+1) {
+              margin-bottom: 0;
+            }
+        }
+
+        @media (min-width: $desktop) {
+            @include gallery(3);
+
+            &:nth-last-child(-n+4) {
+              margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.half-container{
+    // background-color: rgba(255, 255, 255, 0.97);
+    padding-left: 4em;
+    padding-top: 3em;
+}
+
+@include susy-breakpoint($bp-small, $small) {
+    .inset,
+    .inset.right{
+        float: none;
+        img{
+            width: 100%;
+        }
+    }
+
+    .o-profile__image,
+    .o-profile__image.u-right{
+        margin-left: 0;
+        width: 100%;
+    }
+    
+}
+
+//
+//
+@include susy-breakpoint($bp-xl, $large) {    
+    
+    .inset {
+        float: right;
+        margin-right: -20em;
+        padding-left: 1em;
+        margin-top: -1em;
+    }
+
+    .inset.right{
+        float: left;
+        margin-right: 0em;
+        padding-right: 1.5em;
+        padding-left: 0;
+        margin-left: -8em;
+        padding-top: 1em;
+    }
+
+    // 
+    .o-profile__image{
+        max-width: 200px;
+        margin-left: -10em;
+        float: left;
+        margin-right: 2em;
+    }
+    .o-profile__image.u-right{
+        max-width: 200px;
+        margin-right: -10em;
+        float: right;
+        margin-left: 2em;
+    }
+}

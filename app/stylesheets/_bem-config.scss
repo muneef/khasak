@@ -1,0 +1,18 @@
+$bem-block-namespaces: (
+  'object': 'o',
+  'component': 'c',
+  'utility': 'u',
+  'javascript': 'js',
+  'media': 'm',
+  'theme': 't'
+  );
+
+$bem-state-namespace: 'has';
+
+@mixin javascript($name) {
+  @include block($name, $type: 'javascript');
+}
+
+@mixin media($name) {
+  @include block($name, $type: 'media')
+}

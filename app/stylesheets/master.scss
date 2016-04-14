@@ -1,0 +1,100 @@
+// Screen
+// ========
+
+@import "compass";
+@import "normalize";
+@import "susy";
+@import "grids";
+@import "typography";
+@import "typefaces";
+@import "vars";
+
+// Components
+// =======
+@import "components/services";
+@import "components/slider";
+@import "components/menu";
+
+
+div#footer {
+  background-color: #23201F; 
+  padding-top: 2em;
+}
+
+a{
+	color: darken($c-base, 10);
+}
+
+//
+.div-bg{
+	background-image: url(/img/bg-image.jpg);
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body{
+	background-color: $c-body-bg;
+	font-family: 'Playfair Display', 'Rachana', serif;
+	color: $c-body-text;
+	font-size: 16px;
+}
+
+// mod
+.half-container{
+	padding-top: 2rem;
+	padding-bottom: 3rem;
+ 	@include susy-breakpoint($bp-xl, $large) {
+		@include container($bp-med);
+	}
+}
+
+.attention{	
+	padding-top: 3rem;
+	padding-bottom: 2rem;
+}
+.cntr{
+	text-align: center;
+	width: 100%;
+	color: $c-body-text;
+}
+
+.navbar-right li a{
+	color: #fff !important;
+	font-size: 1.8rem;
+}
+
+h3.tagline{
+	text-align: center;
+	color: $c-invert;
+	margin-bottom: 2rem;	
+}
+
+hr{
+	border-top-color: rgba(238, 238, 238, 0.06);
+}
+
+.heading{
+	color: $c-text-title;
+	@include ms-respond(font-size, 1);
+	line-height : 1.5;
+	padding-bottom : 1rem;
+}
+
+.full{
+	width: 100%;
+}
+
+.navbar-default{
+	background-color: transparent;
+	border-bottom: none;
+	padding-top:1.25rem;
+}
+
+/* -- Footer --- */
+
+footer{
+	padding-top: 3rem;
+	color: #6B7882;
+	text-align: center;
+}
+

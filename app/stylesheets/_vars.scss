@@ -1,0 +1,33 @@
+// base colors
+$c-base : #592A7B;
+$c-secondary: #59C2AE;
+$c-invert: #fff;
+
+// body colors
+$c-body-bg-color : $c-invert;
+$c-body-bg: mix($c-secondary, #fff, 1%);
+// $c-body-text: desaturate(mix($c-secondary, $c-base, 70%), 20%);
+$c-body-text: #7B7B7B;
+
+// derivates
+$c-text-base: lighten(desaturate($c-base, 30%), 5%);
+$c-text-title: lighten(desaturate($c-base, 15%), 2.5%);
+$c-list-border: lighten(desaturate($c-base, 31), 63);
+$c-opp-color: adjust_hue(saturate(lighten(#592A7B, 16), 7), 277);
+
+
+$small: layout(2);
+$medium: layout(8);
+$large: layout(12);
+
+// Breakpoints
+
+$bp-small : 24em;
+$bp-small-2 : 29.75em;
+$bp-small-3 : 39.8em;
+$bp-med : 46.8em;
+$bp-med-2 : 48em;
+$bp-large : 50em;
+$bp-large-2 : 54.5em;
+$bp-xl : 60em;
+$bp-xl-2 : 67em;
