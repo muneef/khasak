@@ -1,11 +1,12 @@
 ## Installation
 
 Install Brunch
-
+` npm install -g bower
 ` npm install -g brunch
 
 Start server
 
+` bower install
 ` brunch watch --server
 
 ## Push to github

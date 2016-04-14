@@ -25,7 +25,6 @@ $susy: (
 // -------
 @include susy-breakpoint($bp-small, $small) {
   .cols{ @include span(1 of 1); }
-  .cols-2{ @include span(1 of 1); }  
   .menu-left { @include span(1 of 1 last); }
   .menu-right { 
   	display: none;
@@ -40,7 +39,7 @@ $susy: (
 @include susy-breakpoint($bp-xl, $large) {
   .cols { 
     @include span(1 of 2);
-    &:nth-last-child(n+1) {
+    &:nth-last-child(-n+1) {
       margin-bottom: 0;
       margin-right: 0;
     }
