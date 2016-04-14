@@ -1,11 +1,16 @@
 ## Installation
 
-Clone this repo manually with git or use brunch new gh:dommmel/brunch-with-sass-typogrid
+Install Brunch
+
+` npm install -g brunch
+
+Start server
+
+` brunch watch --server
+
 
 ## Features
 
 * [modular-scale](https://github.com/modularscale/modularscale-sass)
 * [breakpoint](https://github.com/at-import/breakpoint)
 * [susy](http://susy.oddbird.net)
-
-## [Demo](http://dommmel.github.io/brunch-with-sass-typogrid)
