@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'BentonSans-Regular';
+  src: url("/fonts/BentonSans-Regular.eot");
+  src: local("☺"), url("../fonts/BentonSans-Regular.woff") format("woff"), url("../fonts/BentonSans-Regular.ttf") format("truetype"), url("../fonts/BentonSans-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Benton Sans Bold */
+@font-face {
+  font-family: 'BentonSans-Bold';
+  src: url("/fonts/BentonSans-Bold.eot");
+  src: local("☺"), url("../fonts/BentonSans-Bold.woff") format("woff"), url("../fonts/BentonSans-Bold.ttf") format("truetype"), url("../fonts/BentonSans-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
